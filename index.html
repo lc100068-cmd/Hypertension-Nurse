@@ -1,0 +1,1351 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>これ食べていい？LINE相談｜初回モニター募集</title>
+<meta name="description" content="外食もコンビニも、写真を送るだけ。看護師歴35年・自分も高血圧を経験した「高血圧ナースとも子」が、LINEでお答えします。初回モニター価格980円（税込）・先着10名。">
+<meta name="robots" content="noindex">
+<!-- OGP（LINEでシェアされたときの表示）。公開URLと画像URLが決まったら差し替えてください -->
+<meta property="og:title" content="これ食べていい？LINE相談｜初回モニター募集">
+<meta property="og:description" content="外食もコンビニも、写真を送るだけ。看護師に気軽に聞ける14日間。モニター価格980円（税込）・先着10名。">
+<meta property="og:type" content="website">
+<meta property="og:image" content="【OGP画像のURL】">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+<style>
+/* =========================================================
+   色・サイズの基本設定（ここを変えると全体に反映されます）
+   ========================================================= */
+:root {
+  --herb: #5e9e78;        /* やさしい緑（ハーブ） */
+  --herb-deep: #2f6b4c;   /* 見出し・濃い緑 */
+  --herb-pale: #eef6f0;   /* うすい緑の背景 */
+  --herb-line: #d5e8db;
+  --yuzu: #f5c842;        /* 柚子の黄色 */
+  --yuzu-deep: #b98a00;
+  --yuzu-pale: #fff8dc;   /* うすい黄色の背景 */
+  --cta: #3f8a62;         /* 申し込みボタン */
+  --cta-shadow: #2b6447;
+  --text: #333333;
+  --muted: #5f5f5f;
+  --white: #ffffff;
+  --radius: 20px;
+  --page-width: 560px;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: "Zen Maru Gothic", "Hiragino Maru Gothic ProN", "Hiragino Sans", "Meiryo", sans-serif;
+  font-size: 18px;
+  line-height: 1.9;
+  color: var(--text);
+  background: #f6f8f4;
+  letter-spacing: 0.02em;
+  /* 画面下の固定ボタンに本文が隠れないように */
+  padding-bottom: calc(96px + env(safe-area-inset-bottom));
+}
+
+img { max-width: 100%; height: auto; display: block; }
+
+a { color: var(--herb-deep); }
+
+p { margin: 0 0 1em; }
+
+strong { font-weight: 700; }
+
+.marker {
+  background: linear-gradient(transparent 60%, rgba(245, 200, 66, 0.55) 60%);
+  font-weight: 700;
+}
+
+/* ページ全体（PCで見たときも、スマホ幅で中央に表示） */
+.page {
+  max-width: var(--page-width);
+  margin: 0 auto;
+  background: var(--white);
+  overflow: hidden;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.04);
+}
+
+.section {
+  padding: 56px 20px;
+}
+.section--green { background: var(--herb-pale); }
+.section--yuzu { background: var(--yuzu-pale); }
+
+/* セクション見出し */
+.section-title {
+  margin: 0 0 32px;
+  text-align: center;
+  font-size: 25px;
+  font-weight: 900;
+  line-height: 1.5;
+  color: var(--herb-deep);
+}
+.section-title::before {
+  content: "";
+  display: block;
+  width: 36px;
+  height: 36px;
+  margin: 0 auto 10px;
+  /* 葉っぱのマーク */
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Cpath d='M8 32C8 16 18 7 34 6c0 16-9 26-24 26z' fill='%235e9e78'/%3E%3Cpath d='M9 31C15 23 21 17 29 11' stroke='%23fff' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3Ccircle cx='31' cy='31' r='5' fill='%23f5c842'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+.section-lead {
+  text-align: center;
+  margin: -16px 0 28px;
+  color: var(--muted);
+}
+
+/* =========================================================
+   申し込みボタン
+   ========================================================= */
+.cta {
+  text-align: center;
+}
+.cta-button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+  min-height: 72px;
+  padding: 14px 64px 14px 24px;
+  border-radius: 999px;
+  background: var(--cta);
+  color: var(--white);
+  font-size: 21px;
+  font-weight: 900;
+  line-height: 1.4;
+  text-decoration: none;
+  box-shadow: 0 5px 0 var(--cta-shadow), 0 10px 20px rgba(47, 107, 76, 0.22);
+  transition: transform 0.1s, box-shadow 0.1s;
+}
+.cta-button::after {
+  /* 右側の黄色い矢印 */
+  content: "";
+  position: absolute;
+  right: 18px;
+  top: 50%;
+  width: 34px;
+  height: 34px;
+  margin-top: -17px;
+  border-radius: 50%;
+  background: var(--yuzu) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M9 6l6 6-6 6' stroke='%232f6b4c' stroke-width='3' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / 20px no-repeat;
+}
+.cta-button:active {
+  transform: translateY(4px);
+  box-shadow: 0 1px 0 var(--cta-shadow), 0 4px 10px rgba(47, 107, 76, 0.2);
+}
+.cta-button small {
+  display: block;
+  font-size: 15px;
+  font-weight: 700;
+  opacity: 0.95;
+}
+.cta-note {
+  margin: 14px 0 0;
+  font-size: 15px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+/* =========================================================
+   1. ファーストビュー
+   ========================================================= */
+.hero {
+  position: relative;
+  padding: 0 20px 48px;
+  background:
+    radial-gradient(circle at 92% 8%, rgba(245, 200, 66, 0.28) 0 70px, transparent 71px),
+    radial-gradient(circle at 0% 60%, rgba(94, 158, 120, 0.12) 0 120px, transparent 121px),
+    linear-gradient(180deg, #fbfdf9 0%, var(--herb-pale) 100%);
+}
+.hero-band {
+  margin: 0 -20px 18px;
+  padding: 10px 16px;
+  background: var(--herb);
+  color: var(--white);
+  text-align: center;
+  font-size: 18px;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+}
+.hero-band span {
+  display: inline-block;
+  padding: 0 0.4em;
+  margin-right: 0.3em;
+  border-radius: 6px;
+  background: var(--yuzu);
+  color: var(--herb-deep);
+  letter-spacing: 0.04em;
+}
+.hero-service {
+  display: inline-block;
+  margin: 0 0 10px;
+  padding: 2px 16px;
+  border: 2px solid var(--herb);
+  border-radius: 999px;
+  background: var(--white);
+  color: var(--herb-deep);
+  font-size: 16px;
+  font-weight: 700;
+}
+.hero-title {
+  margin: 0 0 8px;
+  font-size: 27px;
+  font-weight: 900;
+  line-height: 1.5;
+  color: var(--text);
+}
+.hero-title .q {
+  display: inline-block;
+  color: var(--herb-deep);
+  font-size: 1.08em;
+  white-space: nowrap;
+  margin-left: -0.45em; /* 先頭の「 の余白を詰める */
+}
+.hero-title .days {
+  color: var(--herb-deep);
+}
+.hero-body {
+  display: grid;
+  grid-template-columns: 1fr 36%;
+  gap: 8px;
+  align-items: center;
+}
+.hero-sub {
+  margin: 0 0 8px;
+  font-size: 17px;
+  line-height: 1.85;
+}
+.hero-img {
+  /* 画像の白い背景を、背景色になじませる */
+  mix-blend-mode: multiply;
+}
+.hero-price {
+  margin: 12px 0 18px;
+  padding: 12px 16px;
+  border-radius: var(--radius);
+  background: var(--white);
+  border: 3px solid var(--yuzu);
+  text-align: center;
+}
+.hero-price-label {
+  display: inline-block;
+  margin-bottom: 4px;
+  padding: 0 14px;
+  border-radius: 999px;
+  background: var(--yuzu-pale);
+  color: var(--yuzu-deep);
+  font-size: 15px;
+  font-weight: 700;
+}
+.hero-price-main {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 4px 14px;
+  font-weight: 900;
+  color: var(--herb-deep);
+  line-height: 1.3;
+}
+.hero-price-main .yen {
+  font-size: 42px;
+  letter-spacing: 0;
+}
+.hero-price-main .yen small {
+  font-size: 22px;
+}
+.hero-price-main .tax {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--muted);
+}
+.hero-price-main .limit {
+  font-size: 20px;
+  color: var(--text);
+}
+.hero-deadline {
+  margin: 4px 0 0;
+  font-size: 15px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+/* =========================================================
+   2. お悩み
+   ========================================================= */
+.worry-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 12px;
+}
+.worry-list li {
+  position: relative;
+  padding: 16px 16px 16px 58px;
+  border-radius: 16px;
+  background: var(--white);
+  border: 2px solid var(--herb-line);
+  font-weight: 700;
+  line-height: 1.7;
+}
+.worry-list li::before {
+  content: "";
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  width: 28px;
+  height: 28px;
+  margin-top: -14px;
+  border-radius: 8px;
+  background: var(--herb) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5' stroke='%23fff' stroke-width='3.2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / 20px no-repeat;
+}
+.worry-figure {
+  width: 150px;
+  margin: 28px auto 0;
+  mix-blend-mode: multiply;
+}
+.bridge {
+  margin: 0;
+  padding: 22px 18px;
+  border-radius: var(--radius);
+  background: var(--white);
+  text-align: center;
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 1.8;
+  position: relative;
+}
+.bridge::before {
+  /* 吹き出しのしっぽ */
+  content: "";
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  margin-left: -14px;
+  border: 14px solid transparent;
+  border-top: 0;
+  border-bottom-color: var(--white);
+}
+.bridge strong { color: var(--herb-deep); }
+
+/* =========================================================
+   3. できること
+   ========================================================= */
+.feature-list {
+  display: grid;
+  gap: 20px;
+}
+.feature {
+  padding: 24px 20px;
+  border-radius: var(--radius);
+  background: var(--white);
+  border: 2px solid var(--herb-line);
+}
+.feature-head {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 12px;
+}
+.feature-num {
+  flex: 0 0 auto;
+  display: grid;
+  place-items: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--herb-pale);
+}
+.feature-num svg { width: 30px; height: 30px; }
+.feature-title {
+  margin: 0;
+  font-size: 21px;
+  font-weight: 900;
+  line-height: 1.5;
+  color: var(--herb-deep);
+}
+.feature p { margin: 0; }
+.reply-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 12px 0 0;
+}
+.reply-tag {
+  display: inline-block;
+  padding: 2px 14px;
+  border-radius: 999px;
+  background: var(--yuzu-pale);
+  border: 2px solid var(--yuzu);
+  font-weight: 700;
+  font-size: 17px;
+}
+
+/* =========================================================
+   4. モニター募集について
+   ========================================================= */
+.monitor {
+  display: grid;
+  grid-template-columns: 1fr 34%;
+  gap: 8px;
+  align-items: end;
+  margin-bottom: 24px;
+}
+.monitor img { mix-blend-mode: multiply; }
+.monitor p:last-child { margin-bottom: 0; }
+.box {
+  padding: 22px 20px;
+  border-radius: var(--radius);
+  background: var(--white);
+}
+.box + .box { margin-top: 14px; }
+.box-title {
+  margin: 0 0 8px;
+  font-size: 19px;
+  font-weight: 900;
+  color: var(--herb-deep);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.box-title .tag {
+  display: inline-block;
+  padding: 0 10px;
+  border-radius: 6px;
+  font-size: 14px;
+  background: var(--herb);
+  color: var(--white);
+}
+.box-title .tag--light {
+  background: var(--yuzu-pale);
+  color: var(--yuzu-deep);
+  border: 1px solid var(--yuzu);
+}
+.box p { margin: 0; }
+
+/* =========================================================
+   5. ご利用の流れ
+   ========================================================= */
+.flow {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  counter-reset: step;
+}
+.flow li {
+  position: relative;
+  padding: 0 0 28px 72px;
+  counter-increment: step;
+}
+.flow li::before {
+  content: "STEP\A" counter(step);
+  white-space: pre;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: grid;
+  place-items: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--herb);
+  color: var(--white);
+  font-size: 12px;
+  font-weight: 900;
+  line-height: 1.15;
+  text-align: center;
+  padding-top: 8px;
+}
+.flow li::after {
+  /* ステップをつなぐ線 */
+  content: "";
+  position: absolute;
+  left: 27px;
+  top: 60px;
+  bottom: 4px;
+  width: 3px;
+  border-radius: 2px;
+  background: var(--herb-line);
+}
+.flow li:last-child { padding-bottom: 0; }
+.flow li:last-child::after { display: none; }
+.flow h3 {
+  margin: 0 0 4px;
+  padding-top: 10px;
+  font-size: 20px;
+  font-weight: 900;
+  color: var(--herb-deep);
+  line-height: 1.5;
+}
+.flow p { margin: 0; }
+.flow-figure {
+  width: 160px;
+  margin: 8px auto 0;
+  mix-blend-mode: multiply;
+}
+
+/* =========================================================
+   6. 相談の例（LINE風のやりとり）
+   ========================================================= */
+.example-note {
+  margin: -16px 0 24px;
+  text-align: center;
+  font-size: 15px;
+  color: var(--muted);
+}
+.example {
+  padding: 22px 16px;
+  border-radius: var(--radius);
+  background: #eaf1f6; /* LINEのトーク画面をイメージした色 */
+}
+.example + .example { margin-top: 20px; }
+.example-label {
+  display: inline-block;
+  margin-bottom: 14px;
+  padding: 2px 14px;
+  border-radius: 999px;
+  background: var(--white);
+  color: var(--herb-deep);
+  font-size: 15px;
+  font-weight: 700;
+}
+.chat {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+.chat:last-child { margin-bottom: 0; }
+.chat--user { justify-content: flex-end; }
+.chat-avatar {
+  flex: 0 0 auto;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: var(--white);
+  border: 2px solid var(--white);
+}
+.chat-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 15%;
+}
+.chat-body {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+.chat-name {
+  margin: 0 0 2px;
+  font-size: 13px;
+  color: var(--muted);
+}
+.bubble {
+  max-width: 82%;
+  padding: 12px 16px;
+  border-radius: 18px;
+  font-size: 17px;
+  line-height: 1.75;
+  background: var(--white);
+}
+.chat--user .bubble {
+  background: #b9e8a5; /* LINEの自分側の吹き出しに近い色 */
+  border-top-right-radius: 4px;
+}
+.chat--nurse .bubble {
+  max-width: none;
+  border-top-left-radius: 4px;
+}
+.bubble p { margin: 0 0 0.6em; }
+.bubble p:last-child { margin-bottom: 0; }
+.bubble ul {
+  margin: 0.2em 0 0.6em;
+  padding-left: 1.2em;
+}
+.bubble li { margin-bottom: 0.2em; }
+.bubble .ok {
+  display: inline-block;
+  margin-bottom: 4px;
+  padding: 0 12px;
+  border-radius: 999px;
+  background: var(--yuzu);
+  color: var(--herb-deep);
+  font-weight: 900;
+  font-size: 16px;
+}
+/* 写真の仮の枠 */
+.photo-slot {
+  display: grid;
+  place-items: center;
+  width: 180px;
+  aspect-ratio: 4 / 3;
+  margin-left: auto;
+  margin-bottom: 8px;
+  border-radius: 14px;
+  border: 2px dashed #9bb7a6;
+  background: rgba(255, 255, 255, 0.7);
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.5;
+  text-align: center;
+  padding: 8px;
+}
+
+/* =========================================================
+   7. とも子について
+   ========================================================= */
+.profile-card {
+  padding: 28px 20px;
+  border-radius: var(--radius);
+  background: var(--white);
+  border: 2px solid var(--herb-line);
+}
+.profile-photo {
+  width: 168px;
+  height: 168px;
+  margin: 0 auto 16px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 5px solid var(--yuzu-pale);
+  outline: 2px solid var(--yuzu);
+  background: var(--white);
+}
+.profile-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 20%;
+}
+.profile-role {
+  margin: 0;
+  text-align: center;
+  color: var(--herb);
+  font-weight: 700;
+  font-size: 16px;
+}
+.profile-name {
+  margin: 0 0 18px;
+  text-align: center;
+  font-size: 26px;
+  font-weight: 900;
+  color: var(--herb-deep);
+}
+.profile-points {
+  list-style: none;
+  margin: 0 0 22px;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+}
+.profile-points li {
+  padding: 10px 14px 10px 44px;
+  border-radius: 12px;
+  background: var(--herb-pale);
+  position: relative;
+  font-weight: 700;
+  line-height: 1.6;
+}
+.profile-points li::before {
+  content: "";
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  width: 18px;
+  height: 18px;
+  margin-top: -9px;
+  border-radius: 50%;
+  background: var(--yuzu);
+}
+.profile-message {
+  padding-top: 20px;
+  border-top: 2px dashed var(--herb-line);
+}
+.profile-message p:last-child { margin-bottom: 0; }
+.profile-sign {
+  text-align: right;
+  font-weight: 700;
+  color: var(--herb-deep);
+}
+
+/* =========================================================
+   8. 料金
+   ========================================================= */
+.price-card {
+  border-radius: var(--radius);
+  background: var(--white);
+  border: 3px solid var(--yuzu);
+  overflow: hidden;
+  margin-bottom: 32px;
+}
+.price-card-head {
+  padding: 24px 16px 20px;
+  text-align: center;
+  background: var(--yuzu-pale);
+}
+.price-card-head .label {
+  margin: 0;
+  font-weight: 700;
+  color: var(--herb-deep);
+}
+.price-card-head .price {
+  margin: 0;
+  font-size: 54px;
+  font-weight: 900;
+  line-height: 1.3;
+  color: var(--herb-deep);
+  letter-spacing: 0;
+}
+.price-card-head .price small {
+  font-size: 24px;
+}
+.price-card-head .price .tax {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--muted);
+}
+.price-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 17px;
+}
+.price-table th,
+.price-table td {
+  padding: 14px 16px;
+  border-top: 1px solid #f0e6c0;
+  text-align: left;
+  vertical-align: top;
+  line-height: 1.7;
+}
+.price-table th {
+  width: 7.5em;
+  font-weight: 700;
+  color: var(--herb-deep);
+  white-space: nowrap;
+}
+.price-future {
+  margin: 0;
+  padding: 14px 16px;
+  border-top: 1px solid #f0e6c0;
+  font-size: 15px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+/* =========================================================
+   9. よくある質問
+   ========================================================= */
+.faq {
+  margin: 0;
+  display: grid;
+  gap: 14px;
+}
+.faq-item {
+  border-radius: 16px;
+  background: var(--white);
+  border: 2px solid var(--herb-line);
+  overflow: hidden;
+}
+.faq dt,
+.faq dd {
+  position: relative;
+  margin: 0;
+  padding: 14px 16px 14px 56px;
+  line-height: 1.7;
+}
+.faq dt {
+  font-weight: 700;
+  background: var(--herb-pale);
+}
+.faq dt::before,
+.faq dd::before {
+  position: absolute;
+  left: 16px;
+  top: 14px;
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 1;
+}
+.faq dt::before {
+  content: "Q";
+  background: var(--herb);
+  color: var(--white);
+}
+.faq dd::before {
+  content: "A";
+  background: var(--yuzu);
+  color: var(--herb-deep);
+}
+
+/* =========================================================
+   10. 注意事項
+   ========================================================= */
+.notice {
+  padding: 22px 20px;
+  border-radius: 16px;
+  background: #f7f7f5;
+  border: 1px solid #e4e4df;
+}
+.notice-title {
+  margin: 0 0 10px;
+  font-size: 19px;
+  font-weight: 900;
+}
+.notice ul {
+  margin: 0;
+  padding-left: 1.2em;
+  font-size: 16px;
+  line-height: 1.85;
+}
+.notice li + li { margin-top: 6px; }
+
+/* =========================================================
+   11. 最後の申し込み
+   ========================================================= */
+.closing {
+  text-align: center;
+  background:
+    radial-gradient(circle at 8% 12%, rgba(245, 200, 66, 0.3) 0 56px, transparent 57px),
+    linear-gradient(180deg, var(--white) 0%, var(--herb-pale) 100%);
+}
+.closing-figure {
+  width: 170px;
+  margin: 0 auto 8px;
+  mix-blend-mode: multiply;
+}
+.closing-text {
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 1.85;
+  margin-bottom: 24px;
+}
+.closing-meta {
+  display: inline-block;
+  margin: 0 0 24px;
+  padding: 10px 18px;
+  border-radius: 14px;
+  background: var(--white);
+  border: 2px solid var(--yuzu);
+  font-size: 16px;
+  line-height: 1.7;
+  font-weight: 700;
+}
+
+/* =========================================================
+   12. フッター
+   ========================================================= */
+.footer {
+  padding: 32px 20px 28px;
+  text-align: center;
+  font-size: 15px;
+  color: var(--muted);
+  background: #f2f4f0;
+}
+.footer a {
+  display: inline-block;
+  padding: 8px 4px;
+  font-weight: 700;
+}
+.footer small {
+  display: block;
+  margin-top: 12px;
+  font-size: 13px;
+}
+
+/* =========================================================
+   画面下に固定する申し込みボタン
+   ========================================================= */
+.sticky-cta {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 50;
+  padding: 10px 16px calc(10px + env(safe-area-inset-bottom));
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.08);
+  transition: transform 0.25s ease;
+}
+.sticky-cta.is-hidden {
+  transform: translateY(110%);
+}
+.sticky-cta-inner {
+  max-width: calc(var(--page-width) - 32px);
+  margin: 0 auto;
+}
+.sticky-cta .cta-button {
+  min-height: 60px;
+  padding: 8px 56px 8px 16px;
+  font-size: 19px;
+  box-shadow: 0 4px 0 var(--cta-shadow);
+}
+.sticky-cta .cta-button small { font-size: 13px; }
+.sticky-cta .cta-button::after {
+  width: 30px;
+  height: 30px;
+  margin-top: -15px;
+  right: 14px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .sticky-cta, .cta-button { transition: none; }
+}
+
+/* とても小さい画面（幅360px未満）向けの調整 */
+@media (max-width: 359px) {
+  body { font-size: 17px; }
+  .hero-title { font-size: 23px; }
+  .cta-button { font-size: 19px; }
+}
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <!-- =====================================================
+       1. ファーストビュー
+       ===================================================== -->
+  <header class="hero">
+    <p class="hero-band"><span>先着10名</span>初回モニター募集</p>
+
+    <p class="hero-service">これ食べていい？LINE相談</p>
+
+    <h1 class="hero-title">
+      <span class="q">「これ、食べていい？」</span><br>を、看護師に<br>気軽に聞ける<span class="days">14日間</span>
+    </h1>
+
+    <div class="hero-body">
+      <p class="hero-sub">
+        外食もコンビニも、<span class="marker">写真を送るだけ</span>。<br>
+        看護師歴35年・自分も高血圧を経験した<strong>とも子</strong>がお答えします。
+      </p>
+      <!-- 画像差し替え：ファーストビューのとも子さん（OKサイン）
+           ファイル：images/tomoko-pose-ok.webp
+           実際の写真に替える場合は src を変更してください -->
+      <img class="hero-img" src="images/tomoko-pose-ok.webp" width="280" height="434" alt="OKサインをする看護師のとも子のイラスト">
+    </div>
+
+    <div class="hero-price">
+      <span class="hero-price-label">初回モニター価格</span>
+      <div class="hero-price-main">
+        <span class="yen">980<small>円</small><span class="tax">（税込）</span></span>
+        <span class="limit">先着10名</span>
+      </div>
+      <p class="hero-deadline">締切：【◯月◯日 23:59】または定員になり次第</p>
+    </div>
+
+    <div class="cta">
+      <!-- 決済ページのURLを href に入れてください -->
+      <a class="cta-button" href="【決済ページのURL】" id="first-cta">
+        <span>モニターに申し込む<small>980円（税込）・14日間</small></span>
+      </a>
+      <p class="cta-note">ボタンを押すと、お支払いページへ進みます</p>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- =====================================================
+         2. こんなお悩みありませんか？
+         ===================================================== -->
+    <section class="section">
+      <h2 class="section-title">こんなお悩み<br>ありませんか？</h2>
+      <ul class="worry-list">
+        <li>退院してから、何を食べていいか分からない</li>
+        <li>外食やコンビニで、毎回迷ってしまう</li>
+        <li>健診で血圧や塩分を指摘された</li>
+        <li>ネットの情報が多すぎて、どれを信じればいいか分からない</li>
+      </ul>
+      <!-- 画像差し替え：考えるポーズ（images/tomoko-pose-think.webp） -->
+      <img class="worry-figure" src="images/tomoko-pose-think.webp" width="260" height="434" alt="考えごとをしているとも子のイラスト">
+      <p class="bridge">
+        その「これ食べていい？」、<br>
+        <strong>ひとりで悩まなくていい</strong>んです。<br>
+        写真を送って、気軽に聞いてください。
+      </p>
+    </section>
+
+    <!-- =====================================================
+         3. このサービスでできること
+         ===================================================== -->
+    <section class="section section--green">
+      <h2 class="section-title">このサービスで<br>できること</h2>
+
+      <div class="feature-list">
+        <div class="feature">
+          <div class="feature-head">
+            <span class="feature-num" aria-hidden="true">
+              <!-- カメラのアイコン -->
+              <svg viewBox="0 0 32 32" fill="none" stroke="#2f6b4c" stroke-width="2.4" stroke-linejoin="round"><path d="M4 11.5a2.5 2.5 0 0 1 2.5-2.5h3.5l2-3h8l2 3h3.5a2.5 2.5 0 0 1 2.5 2.5v12a2.5 2.5 0 0 1-2.5 2.5h-19A2.5 2.5 0 0 1 4 23.5z"/><circle cx="16" cy="17" r="5"/></svg>
+            </span>
+            <h3 class="feature-title">写真を送るだけで<br>相談できます</h3>
+          </div>
+          <p>食品、外食のメニュー、コンビニの商品。迷ったものを<strong>LINEで撮って送るだけ</strong>。むずかしい入力はいりません。</p>
+        </div>
+
+        <div class="feature">
+          <div class="feature-head">
+            <span class="feature-num" aria-hidden="true">
+              <!-- 吹き出しのアイコン -->
+              <svg viewBox="0 0 32 32" fill="none" stroke="#2f6b4c" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"><path d="M5 8.5A3.5 3.5 0 0 1 8.5 5h15A3.5 3.5 0 0 1 27 8.5v10a3.5 3.5 0 0 1-3.5 3.5H14l-6 5v-5h0.5A3.5 3.5 0 0 1 5 18.5z"/><path d="M11 13.5l3 3 6-6"/></svg>
+            </span>
+            <h3 class="feature-title">「OK」か「こう選べばOK」<br>でお返事します</h3>
+          </div>
+          <p>「ダメ」で終わらせず、<strong>どう選べば食べられるか</strong>をお伝えします。</p>
+          <div class="reply-tags">
+            <span class="reply-tag">OK</span>
+            <span class="reply-tag">こう選べばOK</span>
+          </div>
+        </div>
+
+        <div class="feature">
+          <div class="feature-head">
+            <span class="feature-num" aria-hidden="true">
+              <!-- ハートのアイコン -->
+              <svg viewBox="0 0 32 32" fill="none" stroke="#2f6b4c" stroke-width="2.4" stroke-linejoin="round"><path d="M16 27S4.5 20 4.5 12A6.5 6.5 0 0 1 16 8a6.5 6.5 0 0 1 11.5 4C27.5 20 16 27 16 27z"/></svg>
+            </span>
+            <h3 class="feature-title">患者の気持ちが分かる<br>看護師に聞けます</h3>
+          </div>
+          <p>看護師歴35年。そして、自分も高血圧とネフローゼ症候群を経験しました。<strong>「迷う気持ち」が分かる</strong>からこそ、がんばりすぎない方法を一緒に考えます。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         4. モニター募集について
+         ===================================================== -->
+    <section class="section section--yuzu">
+      <h2 class="section-title">モニター募集について</h2>
+
+      <div class="monitor">
+        <div>
+          <p>このサービスは、これから正式にスタートします。</p>
+          <p>その前に、実際に使ってくださる方の声を聞いて、<span class="marker">もっと使いやすく改善したい</span>と考えています。</p>
+          <p>そのため<strong>初回の10名さまだけ</strong>、モニター価格でご案内します。</p>
+        </div>
+        <!-- 画像差し替え：手を合わせるポーズ（images/tomoko-pose-pray.webp） -->
+        <img src="images/tomoko-pose-pray.webp" width="228" height="434" alt="手を合わせてお願いするとも子のイラスト">
+      </div>
+
+      <div class="box">
+        <p class="box-title"><span class="tag">お願い</span>アンケートへのご協力</p>
+        <p>14日間が終わったら、<strong>5分ほどの感想アンケート</strong>にお答えください。</p>
+      </div>
+      <div class="box">
+        <p class="box-title"><span class="tag tag--light">任意</span>感想の掲載について</p>
+        <p>いただいた感想を、Instagramやこのページにのせてもよいか、おうかがいします。のせるかどうかは<strong>ご本人が選べます</strong>。のせる場合も、お名前は出しません。</p>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         5. ご利用の流れ
+         ===================================================== -->
+    <section class="section">
+      <h2 class="section-title">ご利用の流れ</h2>
+      <ol class="flow">
+        <li>
+          <h3>お申し込み</h3>
+          <p>このページのボタンから、お支払いページへ進んでお申し込みください。</p>
+        </li>
+        <li>
+          <h3>LINEで開始のご案内</h3>
+          <p>LINEで、ご相談の始め方をお送りします。</p>
+        </li>
+        <li>
+          <h3>写真を送る</h3>
+          <p>気になる食べものの写真を、LINEで送ってください。<br><strong>14日間で5回まで</strong>ご相談いただけます。</p>
+        </li>
+        <li>
+          <h3>72時間以内にお返事</h3>
+          <p>とも子が、<strong>72時間以内を目安に</strong>お返事します。</p>
+        </li>
+      </ol>
+      <!-- 画像差し替え：両手を広げるポーズ（images/tomoko-pose-open.webp） -->
+      <img class="flow-figure" src="images/tomoko-pose-open.webp" width="336" height="434" alt="両手を広げて案内するとも子のイラスト">
+    </section>
+
+    <!-- =====================================================
+         6. 相談の例
+         ===================================================== -->
+    <section class="section section--green">
+      <h2 class="section-title">相談の例</h2>
+      <p class="example-note">※やりとりのイメージです。実際のお返事は、<br>ご相談の内容にあわせてお答えします。</p>
+
+      <!-- 例1 -->
+      <div class="example">
+        <span class="example-label">例1　コンビニで</span>
+
+        <div class="chat chat--user">
+          <div class="bubble">
+            <!-- 画像差し替え：送られてくる写真の例（おにぎりの棚など） -->
+            <div class="photo-slot">ここに写真の例<br>（コンビニのおにぎり）</div>
+            <p>コンビニのおにぎり、どれを選べばいい？</p>
+          </div>
+        </div>
+
+        <div class="chat chat--nurse">
+          <div class="chat-avatar">
+            <img src="images/tomoko-face-smile.webp" width="350" height="426" alt="とも子">
+          </div>
+          <div class="chat-body">
+            <p class="chat-name">とも子</p>
+            <div class="bubble">
+              <span class="ok">こう選べばOK</span>
+              <p>写真ありがとうございます！</p>
+              <p>梅やたらこなど、しょっぱい具は塩分が多めになりやすいです。袋のうらの「食塩相当量」を見て、<strong>数字が小さいほう</strong>を選べばOKですよ。</p>
+              <p>カップのみそ汁を足すより、野菜サラダ（ドレッシングは半分）を合わせるのがおすすめです。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 例2 -->
+      <div class="example">
+        <span class="example-label">例2　外食で</span>
+
+        <div class="chat chat--user">
+          <div class="bubble">
+            <!-- 画像差し替え：送られてくる写真の例（ラーメン店のメニューなど） -->
+            <div class="photo-slot">ここに写真の例<br>（ラーメン店のメニュー）</div>
+            <p>ラーメン屋さんで食べるなら？</p>
+          </div>
+        </div>
+
+        <div class="chat chat--nurse">
+          <div class="chat-avatar">
+            <img src="images/tomoko-face-smile.webp" width="350" height="426" alt="とも子">
+          </div>
+          <div class="chat-body">
+            <p class="chat-name">とも子</p>
+            <div class="bubble">
+              <span class="ok">こう選べばOK</span>
+              <p>ラーメンも、ポイントをおさえれば楽しめますよ。</p>
+              <ul>
+                <li><strong>スープは飲まずに残す</strong></li>
+                <li>「味うすめ」が頼めるお店ならお願いする</li>
+                <li>トッピングはネギやもやしなど野菜を</li>
+              </ul>
+              <p>スープを残すと、とる塩分をぐっとおさえられます（目安です）。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         7. とも子について
+         ===================================================== -->
+    <section class="section">
+      <h2 class="section-title">とも子について</h2>
+
+      <div class="profile-card">
+        <!-- 画像差し替え：とも子さんの写真
+             写真URL：【とも子さんの写真のURL】
+             写真を使う場合は、下の img の src を写真のURLに替えてください。
+             （いまはイラスト images/tomoko-face-smile.webp を表示しています） -->
+        <div class="profile-photo">
+          <img src="images/tomoko-face-smile.webp" width="350" height="426" alt="高血圧ナースとも子">
+        </div>
+
+        <p class="profile-role">高血圧ナース</p>
+        <p class="profile-name">とも子</p>
+
+        <ul class="profile-points">
+          <li>看護師歴35年</li>
+          <li>自分自身が、血圧200超え・ネフローゼ症候群を経験</li>
+          <li>Instagramで「頑張らない減塩ごはん・外食・買い物術」を発信中（フォロワー約3,600人）</li>
+        </ul>
+
+        <!-- ※とも子さんご本人の言葉に合わせて調整してください -->
+        <div class="profile-message">
+          <p>看護師として35年、たくさんの患者さんと向き合ってきました。</p>
+          <p>そんな私も、血圧が200を超え、ネフローゼ症候群で患者の立場になりました。</p>
+          <p>退院すると、毎日の食事は自分で決めなくてはいけません。お店の前で、コンビニの棚の前で、<span class="marker">「これ、食べていいのかな？」</span>と迷う気持ち。私にもよく分かります。</p>
+          <p>がんばりすぎなくて大丈夫。その「これ食べていい？」に、ひとつずつ、やさしくお答えします。</p>
+          <p class="profile-sign">高血圧ナース とも子</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         8. 料金
+         ===================================================== -->
+    <section class="section section--yuzu" id="price">
+      <h2 class="section-title">料金</h2>
+
+      <div class="price-card">
+        <div class="price-card-head">
+          <p class="label">初回モニター価格</p>
+          <p class="price">980<small>円</small><span class="tax">（税込）</span></p>
+        </div>
+        <table class="price-table">
+          <tr>
+            <th scope="row">期間</th>
+            <td>お申し込みから14日間</td>
+          </tr>
+          <tr>
+            <th scope="row">ご相談回数</th>
+            <td>5回まで</td>
+          </tr>
+          <tr>
+            <th scope="row">相談方法</th>
+            <td>LINEで写真を送るだけ</td>
+          </tr>
+          <tr>
+            <th scope="row">お返事</th>
+            <td>72時間以内が目安</td>
+          </tr>
+          <tr>
+            <th scope="row">募集人数</th>
+            <td><strong>先着10名</strong></td>
+          </tr>
+          <tr>
+            <th scope="row">締切</th>
+            <td>【◯月◯日 23:59】<br>または定員になり次第</td>
+          </tr>
+          <tr>
+            <th scope="row">返金</th>
+            <td>【例：72時間以内に返信がなかった場合は全額返金】</td>
+          </tr>
+        </table>
+        <p class="price-future">※正式リリース後は、2,980円（税込）で提供する予定です。</p>
+      </div>
+
+      <div class="cta">
+        <a class="cta-button" href="【決済ページのURL】">
+          <span>モニターに申し込む<small>980円（税込）・先着10名</small></span>
+        </a>
+        <p class="cta-note">ボタンを押すと、お支払いページへ進みます</p>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         9. よくある質問
+         ===================================================== -->
+    <section class="section">
+      <h2 class="section-title">よくある質問</h2>
+      <dl class="faq">
+        <div class="faq-item">
+          <dt>スマホが苦手でも大丈夫？</dt>
+          <dd>LINEで写真を送れれば大丈夫です。</dd>
+        </div>
+        <div class="faq-item">
+          <dt>5回を使い切れなかったら？</dt>
+          <dd>お申し込みから14日を過ぎると終了になります。気になるものがあれば、お気軽に送ってくださいね。</dd>
+        </div>
+        <div class="faq-item">
+          <dt>病院で食事制限があります</dt>
+          <dd>主治医の指示を最優先にしてお答えします。言われている内容があれば、ご相談のときに教えてください。</dd>
+        </div>
+        <div class="faq-item">
+          <dt>モニターは何をすればいい？</dt>
+          <dd>ふだんどおりご相談いただき、終了後に5分ほどのアンケートに答えるだけです。</dd>
+        </div>
+        <div class="faq-item">
+          <dt>感想は必ず公開されますか？</dt>
+          <dd>いいえ。掲載してよいかは、ご本人が選べます。お名前は出しません。</dd>
+        </div>
+      </dl>
+    </section>
+
+    <!-- =====================================================
+         10. 注意事項
+         ===================================================== -->
+    <section class="section section--green">
+      <div class="notice">
+        <p class="notice-title">ご注意ください</p>
+        <ul>
+          <li>このサービスは、医療行為や診察ではありません。治療や食事制限については、主治医の指示に従ってください。</li>
+          <li>お答えする塩分量は目安です。</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         11. 最後の申し込みボタン
+         ===================================================== -->
+    <section class="section closing">
+      <!-- 画像差し替え：ガッツポーズ（images/tomoko-pose-guts.webp） -->
+      <img class="closing-figure" src="images/tomoko-pose-guts.webp" width="268" height="434" alt="笑顔でガッツポーズをするとも子のイラスト">
+      <p class="closing-text">
+        「これ、食べていい？」を<br>
+        ひとりで抱えこまずに。<br>
+        14日間、いっしょに考えましょう。
+      </p>
+      <p class="closing-meta">
+        モニター価格 980円（税込）・先着10名<br>
+        締切：【◯月◯日 23:59】または定員になり次第
+      </p>
+      <div class="cta">
+        <a class="cta-button" href="【決済ページのURL】">
+          <span>モニターに申し込む<small>980円（税込）・14日間</small></span>
+        </a>
+        <p class="cta-note">ボタンを押すと、お支払いページへ進みます</p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =====================================================
+       12. フッター（特定商取引法に基づく表記）
+       ===================================================== -->
+  <footer class="footer">
+    <a href="【特定商取引法に基づく表記のURL】">特定商取引法に基づく表記</a>
+    <small>&copy; これ食べていい？LINE相談／高血圧ナースとも子</small>
+  </footer>
+
+</div>
+
+<!-- =====================================================
+     画面下に固定する申し込みボタン
+     （最初の申し込みボタンが見えている間は隠れます）
+     ===================================================== -->
+<div class="sticky-cta is-hidden" id="sticky-cta">
+  <div class="sticky-cta-inner">
+    <a class="cta-button" href="【決済ページのURL】">
+      <span>980円で申し込む<small>先着10名・14日間</small></span>
+    </a>
+  </div>
+</div>
+
+<script>
+  // 最初の申し込みボタンが画面に見えている間は、固定ボタンを隠す
+  (function () {
+    var sticky = document.getElementById('sticky-cta');
+    var first = document.getElementById('first-cta');
+    if (!sticky || !first) return;
+    if (!('IntersectionObserver' in window)) {
+      sticky.classList.remove('is-hidden');
+      return;
+    }
+    new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        var passed = !entry.isIntersecting && entry.boundingClientRect.top < 0;
+        sticky.classList.toggle('is-hidden', !passed);
+      });
+    }).observe(first);
+  })();
+</script>
+
+</body>
+</html>
