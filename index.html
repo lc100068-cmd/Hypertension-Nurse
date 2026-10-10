@@ -4,14 +4,15 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>これ食べていい？LINE相談｜初回モニター募集</title>
-<meta name="description" content="外食もコンビニも、写真を送るだけ。看護師歴35年・自分も高血圧を経験した「高血圧ナースとも子」が、LINEでお答えします。初回モニター価格980円（税込）・先着10名。">
+<meta name="description" content="その日の食事の写真を、LINEでまとめて送るだけ。看護師歴35年・自分も高血圧を経験した「高血圧ナースとも子」が、1日分の食事にお返事します。初回モニター価格980円（税込）・先着10名。">
 <meta name="robots" content="noindex">
 <!-- OGP（LINEでシェアされたときの表示）。公開URLと画像URLが決まったら差し替えてください -->
 <meta property="og:title" content="これ食べていい？LINE相談｜初回モニター募集">
-<meta property="og:description" content="外食もコンビニも、写真を送るだけ。看護師に気軽に聞ける14日間。モニター価格980円（税込）・先着10名。">
+<meta property="og:description" content="その日の食事の写真を、まとめて送るだけ。看護師に気軽に聞ける14日間。モニター価格980円（税込）・先着10名。">
 <meta property="og:type" content="website">
-<!-- 公開URLが決まったら、https:// から始まる画像のURL（例：https://lc100068-cmd.github.io/Hypertension-Nurse/images/header.webp）に替えるとLINEでも画像が出ます -->
-<meta property="og:image" content="【OGP画像のURL】">
+<!-- GitHub Pages の公開URL。別の場所で公開するときは、この2行のURLを替えてください -->
+<meta property="og:url" content="https://lc100068-cmd.github.io/Hypertension-Nurse/">
+<meta property="og:image" content="https://lc100068-cmd.github.io/Hypertension-Nurse/images/header-ogp.jpg">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -576,6 +577,54 @@ strong { font-weight: 700; }
   font-size: 16px;
 }
 /* 写真の仮の枠 */
+.photo-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+  margin-bottom: 8px;
+}
+.photo-slot--sm {
+  width: auto !important;
+  aspect-ratio: 1 / 1 !important;
+  margin: 0 !important;
+  font-size: 12px !important;
+}
+.meal {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 2px dashed var(--herb-line);
+}
+.meal-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px !important;
+}
+.meal-head .ok { margin-bottom: 0; }
+.meal-label {
+  display: inline-grid;
+  place-items: center;
+  min-width: 2em;
+  padding: 0 8px;
+  border-radius: 8px;
+  background: var(--herb);
+  color: var(--white);
+  font-weight: 900;
+  font-size: 16px;
+}
+.meal--summary {
+  margin: 14px -6px 0;
+  padding: 12px;
+  border: 0;
+  border-radius: 12px;
+  background: var(--yuzu-pale);
+}
+.td-note {
+  display: block;
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.6;
+}
 .photo-slot {
   display: grid;
   place-items: center;
@@ -922,7 +971,7 @@ strong { font-weight: 700; }
            「初回モニター価格」「先着10名」に描きかえています -->
     <div class="hero-visual">
       <img src="images/header.webp" width="1672" height="941" fetchpriority="high"
-           alt="高血圧ナースの減塩サポート「これ食べていい？LINE相談」。初回モニター価格980円、先着10名。14日間で5回まで、食品・外食・コンビニの写真を送るだけ。「OK／こう選べばOK」で返信。">
+           alt="高血圧ナースの減塩サポート「これ食べていい？LINE相談」。初回モニター価格980円、先着10名。14日間で5回（5日分）まで、食事の写真を送るだけ。「OK／こう選べばOK」で返信。">
     </div>
 
     <h1 class="hero-title">
@@ -930,8 +979,8 @@ strong { font-weight: 700; }
     </h1>
 
     <p class="hero-sub">
-      外食もコンビニも、<span class="marker">写真を送るだけ</span>。<br>
-      看護師歴35年・自分も高血圧を経験した<strong>とも子</strong>がお答えします。
+      その日の食事の写真を、<span class="marker">まとめて送るだけ</span>。<br>
+      看護師歴35年・自分も高血圧を経験した<strong>とも子</strong>が、1日分の食事にお返事します。
     </p>
 
     <div class="hero-price">
@@ -940,15 +989,15 @@ strong { font-weight: 700; }
         <span class="yen">980<small>円</small><span class="tax">（税込）</span></span>
         <span class="limit">先着10名</span>
       </div>
-      <p class="hero-deadline">締切：【◯月◯日 23:59】または定員になり次第</p>
+      <p class="hero-deadline">締切：10月31日（土）23:59または定員になり次第</p>
     </div>
 
     <div class="cta">
-      <!-- 決済ページのURLを href に入れてください -->
-      <a class="cta-button" href="【決済ページのURL】" id="first-cta">
+      <!-- 決済ページ（note）のURL。変更するときは、このページ内の4か所すべてを替えてください -->
+      <a class="cta-button" href="https://note.com/tomo_genen777/n/nf81d1122db67?sub_rt=share_pw" id="first-cta">
         <span>モニターに申し込む<small>980円（税込）・14日間</small></span>
       </a>
-      <p class="cta-note">ボタンを押すと、お支払いページへ進みます</p>
+      <p class="cta-note">ボタンを押すと、お申し込みページ（note）へ進みます</p>
     </div>
   </header>
 
@@ -970,7 +1019,7 @@ strong { font-weight: 700; }
       <p class="bridge">
         その「これ食べていい？」、<br>
         <strong>ひとりで悩まなくていい</strong>んです。<br>
-        写真を送って、気軽に聞いてください。
+        1日の食事の写真を送って、気軽に聞いてください。
       </p>
     </section>
 
@@ -987,9 +1036,9 @@ strong { font-weight: 700; }
               <!-- カメラのアイコン -->
               <svg viewBox="0 0 32 32" fill="none" stroke="#2f6b4c" stroke-width="2.4" stroke-linejoin="round"><path d="M4 11.5a2.5 2.5 0 0 1 2.5-2.5h3.5l2-3h8l2 3h3.5a2.5 2.5 0 0 1 2.5 2.5v12a2.5 2.5 0 0 1-2.5 2.5h-19A2.5 2.5 0 0 1 4 23.5z"/><circle cx="16" cy="17" r="5"/></svg>
             </span>
-            <h3 class="feature-title">写真を送るだけで<br>相談できます</h3>
+            <h3 class="feature-title">1日の食事を<br>まとめて送るだけ</h3>
           </div>
-          <p>食品、外食のメニュー、コンビニの商品。迷ったものを<strong>LINEで撮って送るだけ</strong>。むずかしい入力はいりません。</p>
+          <p>朝・昼・夜、間食も。家のごはんも外食もコンビニも、食べたものを撮っておいて、<strong>1日の終わりにまとめてLINEで送るだけ</strong>。食事のたびに急いで聞かなくて大丈夫です。</p>
         </div>
 
         <div class="feature">
@@ -998,9 +1047,9 @@ strong { font-weight: 700; }
               <!-- 吹き出しのアイコン -->
               <svg viewBox="0 0 32 32" fill="none" stroke="#2f6b4c" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"><path d="M5 8.5A3.5 3.5 0 0 1 8.5 5h15A3.5 3.5 0 0 1 27 8.5v10a3.5 3.5 0 0 1-3.5 3.5H14l-6 5v-5h0.5A3.5 3.5 0 0 1 5 18.5z"/><path d="M11 13.5l3 3 6-6"/></svg>
             </span>
-            <h3 class="feature-title">「OK」か「こう選べばOK」<br>でお返事します</h3>
+            <h3 class="feature-title">1食ずつ「OK」か<br>「こう選べばOK」でお返事</h3>
           </div>
-          <p>「ダメ」で終わらせず、<strong>どう選べば食べられるか</strong>をお伝えします。</p>
+          <p>1日分の食事をまとめて見て、1食ずつお返事します。「ダメ」で終わらせず、<strong>次はどう選べばいいか</strong>をお伝えします。</p>
           <div class="reply-tags">
             <span class="reply-tag">OK</span>
             <span class="reply-tag">こう選べばOK</span>
@@ -1054,19 +1103,19 @@ strong { font-weight: 700; }
       <ol class="flow">
         <li>
           <h3>お申し込み</h3>
-          <p>このページのボタンから、お支払いページへ進んでお申し込みください。</p>
+          <p>このページのボタンから、お申し込みページ（note）へ進んでお申し込みください。</p>
         </li>
         <li>
           <h3>LINEで開始のご案内</h3>
-          <p>LINEで、ご相談の始め方をお送りします。</p>
+          <p>お申し込みのあと、LINEでのご相談の始め方をご案内します。</p>
         </li>
         <li>
-          <h3>写真を送る</h3>
-          <p>気になる食べものの写真を、LINEで送ってください。<br><strong>14日間で5回まで</strong>ご相談いただけます。</p>
+          <h3>1日分の食事の写真を送る</h3>
+          <p>その日に食べたもの（朝・昼・夜・間食）の写真を、まとめてLINEで送ってください。<br><strong>14日間で5回（5日分）まで</strong>ご相談いただけます。</p>
         </li>
         <li>
           <h3>72時間以内にお返事</h3>
-          <p>とも子が、<strong>72時間以内を目安に</strong>お返事します。</p>
+          <p>とも子が、1日分の食事にまとめて、<strong>72時間以内を目安に</strong>お返事します。</p>
         </li>
       </ol>
       <!-- 画像差し替え：両手を広げるポーズ（images/tomoko-pose-open.webp） -->
@@ -1078,63 +1127,51 @@ strong { font-weight: 700; }
          ===================================================== -->
     <section class="section section--green">
       <h2 class="section-title">相談の例</h2>
-      <p class="example-note">※やりとりのイメージです。実際のお返事は、<br>ご相談の内容にあわせてお答えします。</p>
+      <p class="example-note">※やりとりのイメージです。実際のお返事は、<br>送っていただいた食事にあわせてお答えします。</p>
 
-      <!-- 例1 -->
       <div class="example">
-        <span class="example-label">例1　コンビニで</span>
+        <span class="example-label">例　ある1日の食事</span>
 
         <div class="chat chat--user">
           <div class="bubble">
-            <!-- 画像差し替え：送られてくる写真の例（おにぎりの棚など） -->
-            <div class="photo-slot">ここに写真の例<br>（コンビニのおにぎり）</div>
-            <p>コンビニのおにぎり、どれを選べばいい？</p>
-          </div>
-        </div>
-
-        <div class="chat chat--nurse">
-          <div class="chat-avatar">
-            <img src="images/tomoko-face-smile.webp" width="350" height="426" alt="とも子">
-          </div>
-          <div class="chat-body">
-            <p class="chat-name">とも子</p>
-            <div class="bubble">
-              <span class="ok">こう選べばOK</span>
-              <p>写真ありがとうございます！</p>
-              <p>梅やたらこなど、しょっぱい具は塩分が多めになりやすいです。袋のうらの「食塩相当量」を見て、<strong>数字が小さいほう</strong>を選べばOKですよ。</p>
-              <p>カップのみそ汁を足すより、野菜サラダ（ドレッシングは半分）を合わせるのがおすすめです。</p>
+            <!-- 画像差し替え：送られてくる写真の例（朝・昼・夜） -->
+            <div class="photo-row">
+              <div class="photo-slot photo-slot--sm">朝の<br>写真</div>
+              <div class="photo-slot photo-slot--sm">昼の<br>写真</div>
+              <div class="photo-slot photo-slot--sm">夜の<br>写真</div>
             </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- 例2 -->
-      <div class="example">
-        <span class="example-label">例2　外食で</span>
-
-        <div class="chat chat--user">
-          <div class="bubble">
-            <!-- 画像差し替え：送られてくる写真の例（ラーメン店のメニューなど） -->
-            <div class="photo-slot">ここに写真の例<br>（ラーメン店のメニュー）</div>
-            <p>ラーメン屋さんで食べるなら？</p>
+            <p>今日の食事です。朝はトーストと目玉焼き、昼はコンビニのおにぎり2個とカップのみそ汁、夜はラーメンでした。</p>
           </div>
         </div>
 
         <div class="chat chat--nurse">
           <div class="chat-avatar">
-            <img src="images/tomoko-face-smile.webp" width="350" height="426" alt="とも子">
+            <img src="images/tomoko-face-smile.webp" width="700" height="852" alt="とも子">
           </div>
           <div class="chat-body">
             <p class="chat-name">とも子</p>
             <div class="bubble">
-              <span class="ok">こう選べばOK</span>
-              <p>ラーメンも、ポイントをおさえれば楽しめますよ。</p>
-              <ul>
-                <li><strong>スープは飲まずに残す</strong></li>
-                <li>「味うすめ」が頼めるお店ならお願いする</li>
-                <li>トッピングはネギやもやしなど野菜を</li>
-              </ul>
-              <p>スープを残すと、とる塩分をぐっとおさえられます（目安です）。</p>
+              <p>1日分の写真、ありがとうございます！</p>
+
+              <div class="meal">
+                <p class="meal-head"><span class="meal-label">朝</span><span class="ok">OK</span></p>
+                <p>トーストと目玉焼き、いいですね。目玉焼きは、しょうゆやソースを少なめにすると、さらに◎です。</p>
+              </div>
+
+              <div class="meal">
+                <p class="meal-head"><span class="meal-label">昼</span><span class="ok">こう選べばOK</span></p>
+                <p>おにぎりは、袋のうらの「食塩相当量」を見て、<strong>数字が小さいほう</strong>を選べばOK。梅やたらこなど、しょっぱい具は多めになりやすいです。</p>
+              </div>
+
+              <div class="meal">
+                <p class="meal-head"><span class="meal-label">夜</span><span class="ok">こう選べばOK</span></p>
+                <p>ラーメンは、<strong>スープを飲まずに残せばOK</strong>。トッピングはネギやもやしなど、野菜がおすすめです。</p>
+              </div>
+
+              <div class="meal meal--summary">
+                <p class="meal-head"><span class="meal-label meal-label--wide">今日のひとこと</span></p>
+                <p>1日をとおして見ると、お昼のみそ汁と夜のラーメンで「汁もの」が2回ありました。<span class="marker">どちらか1回にする</span>だけで、とる塩分をぐっとおさえられます（目安です）。</p>
+              </div>
             </div>
           </div>
         </div>
@@ -1194,15 +1231,15 @@ strong { font-weight: 700; }
           </tr>
           <tr>
             <th scope="row">ご相談回数</th>
-            <td>5回まで</td>
+            <td>5回（5日分）まで<br><small class="td-note">1日分の食事（朝・昼・夜・間食）をまとめて1回とします</small></td>
           </tr>
           <tr>
             <th scope="row">相談方法</th>
-            <td>LINEで写真を送るだけ</td>
+            <td>その日の食事の写真を、LINEでまとめて送るだけ</td>
           </tr>
           <tr>
             <th scope="row">お返事</th>
-            <td>72時間以内が目安</td>
+            <td>1日分にまとめて、72時間以内が目安</td>
           </tr>
           <tr>
             <th scope="row">募集人数</th>
@@ -1210,7 +1247,7 @@ strong { font-weight: 700; }
           </tr>
           <tr>
             <th scope="row">締切</th>
-            <td>【◯月◯日 23:59】<br>または定員になり次第</td>
+            <td>10月31日（土）23:59<br>または定員になり次第</td>
           </tr>
           <tr>
             <th scope="row">返金</th>
@@ -1221,10 +1258,10 @@ strong { font-weight: 700; }
       </div>
 
       <div class="cta">
-        <a class="cta-button" href="【決済ページのURL】">
+        <a class="cta-button" href="https://note.com/tomo_genen777/n/nf81d1122db67?sub_rt=share_pw">
           <span>モニターに申し込む<small>980円（税込）・先着10名</small></span>
         </a>
-        <p class="cta-note">ボタンを押すと、お支払いページへ進みます</p>
+        <p class="cta-note">ボタンを押すと、お申し込みページ（note）へ進みます</p>
       </div>
     </section>
 
@@ -1239,8 +1276,12 @@ strong { font-weight: 700; }
           <dd>LINEで写真を送れれば大丈夫です。</dd>
         </div>
         <div class="faq-item">
-          <dt>5回を使い切れなかったら？</dt>
+          <dt>5日分を使い切れなかったら？</dt>
           <dd>お申し込みから14日を過ぎると終了になります。気になるものがあれば、お気軽に送ってくださいね。</dd>
+        </div>
+        <div class="faq-item">
+          <dt>写真を撮り忘れた食事があったら？</dt>
+          <dd>撮れた分だけで大丈夫です。撮り忘れた食事は、「〇〇を食べた」と文字で送ってください。</dd>
         </div>
         <div class="faq-item">
           <dt>病院で食事制限があります</dt>
@@ -1283,13 +1324,13 @@ strong { font-weight: 700; }
       </p>
       <p class="closing-meta">
         モニター価格 980円（税込）・先着10名<br>
-        締切：【◯月◯日 23:59】または定員になり次第
+        締切：10月31日（土）23:59または定員になり次第
       </p>
       <div class="cta">
-        <a class="cta-button" href="【決済ページのURL】">
+        <a class="cta-button" href="https://note.com/tomo_genen777/n/nf81d1122db67?sub_rt=share_pw">
           <span>モニターに申し込む<small>980円（税込）・14日間</small></span>
         </a>
-        <p class="cta-note">ボタンを押すと、お支払いページへ進みます</p>
+        <p class="cta-note">ボタンを押すと、お申し込みページ（note）へ進みます</p>
       </div>
     </section>
 
@@ -1311,7 +1352,7 @@ strong { font-weight: 700; }
      ===================================================== -->
 <div class="sticky-cta is-hidden" id="sticky-cta">
   <div class="sticky-cta-inner">
-    <a class="cta-button" href="【決済ページのURL】">
+    <a class="cta-button" href="https://note.com/tomo_genen777/n/nf81d1122db67?sub_rt=share_pw">
       <span>980円で申し込む<small>先着10名・14日間</small></span>
     </a>
   </div>
